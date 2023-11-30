@@ -1,0 +1,91 @@
+// _spaces.scss
+@import "./variables";
+
+$spaces-map: (
+  "0": 0,
+  "1": 0.625rem,
+  "2": 1.25rem,
+  "3": 1.875rem,
+  "4": 2.5rem,
+  "5": 3.125rem,
+  "6": 3.75rem,
+  "7": 4.375rem,  
+  "8": 5rem,  
+  "9": 5.625rem,  
+  "10": 6.25rem,  
+  "11": 6.875rem,  
+  "12": 7.5rem,  
+  "13": 8.125rem,  
+  "14": 8.75rem,  
+  "15": 9.375rem
+
+
+
+
+);
+
+ @each $space, $value in $spaces-map {
+  .m-#{$space} {
+    margin: $value;
+  }
+
+  .mt-#{$space} {
+    margin-top: $value;
+  }
+
+  .mr-#{$space} {
+    margin-right: $value;
+  }
+
+  .mb-#{$space} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$space} {
+    margin-left: $value;
+  }
+
+  .mx-#{$space} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .my-#{$space} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .p-#{$space} {
+    padding: $value;
+  }
+
+  .pt-#{$space} {
+    padding-top: $value;
+  }
+
+  .pr-#{$space} {
+    padding-right: $value;
+  }
+
+  .pb-#{$space} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$space} {
+    padding-left: $value;
+  }
+
+  .px-#{$space} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .py-#{$space} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+  .gap-#{$space}
+  {
+    gap:$value;
+  }
+}

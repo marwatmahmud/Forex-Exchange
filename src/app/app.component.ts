@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'workshop';
+
+  selectedFromCurrency='usd';
+  selectedToCurrency='eur';
+  onSelectedFromChanged(curr:string){
+    this.selectedFromCurrency=curr;
+  }
+  onSelectedToChanged(curr:string){
+    this.selectedToCurrency=curr;
+  }
 }

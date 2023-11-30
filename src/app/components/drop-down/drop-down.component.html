@@ -1,0 +1,6 @@
+ 
+
+<select class="col-11 gray white-bg p-1" name="currency"
+ (change)="selectCurrency($event )">
+    <option *ngFor="let curr of currencies">{{curr}}</option>
+  </select>

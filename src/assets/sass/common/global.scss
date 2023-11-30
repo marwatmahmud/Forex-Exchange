@@ -1,0 +1,76 @@
+$base-font-size: 10px;
+
+* {
+  font-family: $font-system-ui;
+}
+
+%flex {
+  display: flex;
+}
+
+%row {
+  @extend %flex;
+  flex-direction: row;
+}
+
+%column {
+  @extend %flex;
+  flex-direction: column;
+}
+
+%space-between {
+  justify-content: space-between;
+}
+
+%align-self-center {
+  align-self: center;
+}
+
+.flex {
+  @extend %flex;
+}
+
+.row, .flex-row {
+  @extend %row;
+}
+
+.column, .flex-column {
+  @extend %column;
+}
+
+.space-between {
+  @extend %space-between;
+}
+
+.align-self-center {
+  @extend %align-self-center;
+}
+
+.flex-end {
+ @extend %flex;
+  justify-content: flex-end;
+}
+
+.border-none {
+  border: none;
+}
+
+
+
+.flex-center {
+  @extend %flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+option{
+    color:black;
+}
+.space-around{
+    justify-content: space-around;
+}
+ 

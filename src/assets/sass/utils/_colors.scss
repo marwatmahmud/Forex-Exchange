@@ -1,0 +1,22 @@
+@import "./variables";
+$colors-map: (
+ "black":$black,
+ "white":$white,
+ "gray":$gray ,
+"gray-bg": $gray-bg,
+"green-1" :$green-1 ,
+"grey-1":$grey-1,
+"grey-2":$grey-2
+
+);
+
+// @each Sass loop to generate classes
+@each $name, $hex-value in $colors-map {
+  .#{$name} {
+    color: $hex-value;
+  }
+
+  .#{$name}-bg {
+    background-color: $hex-value;
+  }
+}

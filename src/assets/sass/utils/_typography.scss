@@ -1,0 +1,66 @@
+@use "sass:math";
+@import "./variables";
+@function toRem($size, $base: 15px) {
+  @return math.div($size, $base) * 1rem;
+}
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: toRem($size);
+}
+$font-sizes-map: (
+  "font-size-sm": $font-size-sm,
+  "font-size-xs": $font-size-xs,
+  "font-size-m": $font-size-m,
+  "font-size-lg": $font-size-lg,
+  "font-size-xl": $font-size-xl,
+  "font-size-xxl": $font-size-xxl,
+);
+
+@each $name, $value in $font-sizes-map {
+  .#{$name} {
+    @include fontSize($value);
+  }
+}
+
+@mixin lineHeight($size) {
+  line-height: $size;
+  line-height: toRem($size);
+}
+$line-height-map: (
+  "line-height-1": $line-height-1,
+  "line-height-2": $line-height-2,
+  "line-height-3": $line-height-3,
+  "line-height-4": $line-height-4,
+  "line-height-5": $line-height-5,
+  "line-height-6": $line-height-6,
+  "line-height-7": $line-height-7,
+  "line-height-8": $line-height-8,
+  "line-height-9": $line-height-9,
+  "line-height-10": $line-height-10,
+  "line-height-11": $line-height-11,
+  "line-height-12": $line-height-12,
+);
+
+@each $name, $value in $line-height-map {
+  .#{$name} {
+    @include lineHeight($value);
+  }
+}
+//////////
+
+$font-weights-map: (
+  "font-thin": $font-thin,
+  "font-extraLight": $font-extralight,
+  "font-light": $font-light,
+  "font-normal": $font-normal,
+  "font-medium": $font-medium,
+  "font-semibold": $font-semibold,
+  "font-bold": $font-bold,
+  "font-extrabold": $font-extrabold,
+  "font-black": $font-black,
+);
+@each $name, $value in $font-weights-map {
+  .#{$name} {
+    font-weight: $value;
+  }
+}

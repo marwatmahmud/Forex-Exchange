@@ -1,0 +1,75 @@
+@import "../../../assets/sass/utils/variables";
+@import "../../../assets/sass/utils/typography";
+
+
+.main-container{
+  border: 0.625rem solid $white;
+  border-radius: 0.4rem;
+  box-shadow: 4px 10px 25px rgb(0 0 0 / 0.1);
+  height: 65vh;
+
+
+   .currency-flag {
+    margin:0.125rem; //change to rem
+    border-radius: 50%;
+    height: 2.4rem; 
+    width: 2.4rem; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    flex: 0 0 auto; //adding instead of col-2
+  
+
+
+
+}
+
+.icon{
+   
+  border-radius: 30%;
+ 
+}
+
+ 
+
+.rate{
+gap:0.2rem;
+max-width: 100%;
+
+.price{
+  text-align: right;
+  display: block;
+  font-size: 2rem;
+}
+
+.exchange{
+  font-size: 1.2rem;
+  margin-inline-start: auto;
+ }
+}
+ 
+.chart {
+  height: 49vh;
+  border: 1px solid $white;
+ 
+  li {
+    font-size: 0.9rem; 
+    .btn-black {
+      color:$black;
+      background: none;
+      border:none;
+      cursor: pointer;
+  }
+  .btn-black:focus{
+    background-color: aqua;
+
+  }
+  
+}
+ 
+  
+}
+}
+
+

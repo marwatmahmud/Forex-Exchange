@@ -1,0 +1,34 @@
+@use "sass:math";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$grid-columns: 12;
+$grid-gutter: 1rem;
+
+@each $breakpoint, $breakpoint-width in $grid-breakpoints {
+  @media (min-width: $breakpoint-width) {
+    .container-#{$breakpoint} {
+      max-width: $breakpoint-width;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: math.div($grid-gutter, 2);
+      padding-right: math.div($grid-gutter, 2);
+    }
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 percentage(  math.div( $i , $grid-columns));
+    max-width: percentage(  math.div( $i , $grid-columns));
+  }
+  .colm-#{$i} {
+    max-width: percentage(  math.div( $i , $grid-columns));
+  }
+}

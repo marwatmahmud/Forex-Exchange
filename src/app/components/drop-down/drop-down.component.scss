@@ -1,0 +1,14 @@
+  @import "../../../assets/sass/utils/variables";
+  @import "../../../assets/sass/utils/typography";
+
+  
+  select {
+    border: 1px solid $gray;
+    border-radius: 0.4rem;
+    font-size: $font-size-lg;
+
+    width: 20vw;
+height: 3.1rem;
+  
+  
+  }
